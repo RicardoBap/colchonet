@@ -51,3 +51,23 @@ header {
     }
   }
 }
+
+
+header nav {
+  line-height: $header-height;
+  float: right;
+  li {
+    display: inline;
+    background-color: #546F3C;
+    padding: 7px 10px;
+
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+
+    a {
+      font-size: 12px;
+      font-weight: 600;
+      color: #FFF;
+    }
+  }
+}
