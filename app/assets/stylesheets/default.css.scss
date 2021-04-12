@@ -71,3 +71,25 @@ header nav {
     }
   }
 }
+
+
+#content {
+  text-align: left;
+  width: $content-width;
+  margin: 0 auto;
+
+  h1 {
+    font-size: 1.5em;
+  }
+
+  a, a:visited, a:hover {
+    color: #242;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  ul, form, p {
+    margin: 10px 0;
+  }
+}
