@@ -45,6 +45,9 @@ pt-BR:
       location: "Localização: %{location}"
       bio: "Bio: %{bio}"
   
+  rooms:
+    new:
+      title: Novo quarto
     
 
   date:
