@@ -8,4 +8,11 @@ class User < ApplicationRecord
   validates_uniqueness_of :email
 
   has_secure_password
+
+  before_create :generate_token
+
+  def generate_token
+    self.confirmation_token = SecureRandom.urlsafe_base64
+  end
+
 end
