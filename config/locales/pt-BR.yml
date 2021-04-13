@@ -23,6 +23,17 @@ pt-BR:
         description: Descrição
         location: Localização
         title: Título
+  
+  links:
+      back: Voltar
+
+  users:
+    new:
+      title: Cadastro
+    edit: 
+      title: Editar Perfil
+  
+    
 
   date:
     abbr_day_names:
