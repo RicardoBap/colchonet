@@ -57,6 +57,9 @@ pt-BR:
       edit: 'Editar perfil'
       location: "Localização: %{location}"
       bio: "Bio: %{bio}"
+    #Confirmação de email
+    confirmations:
+      success: Email confirmado com sucesso, obrigado!
   
   rooms:
     new:
