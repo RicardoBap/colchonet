@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   resources :users
 
   resource :confirmation, :only => [:show]
+
+  resource :user_sessions, :only => [:create, :new, :destroy]
   
   root :to => 'home#index'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
