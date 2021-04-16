@@ -65,13 +65,6 @@ pt-BR:
     new:
       title: Novo quarto
 
-  # user_sessions
-  # show:
-  #   edit: 'Editar perfil'
-  #   title: "Perfil: %{user_name}"
-  #   location: "Localização: %{location}"
-  #   bio: "Bio: %{bio}"
-
   user_sessions:
     new:
       title: 'Login'
@@ -79,6 +72,10 @@ pt-BR:
 
     sigup_mailer:
       confirm_email:
+
+    falsh:
+      notice:
+        signed_in: AAAAAAAAAAAAAAAAAAAAAAAA
   
   activemodel:
     attributes:

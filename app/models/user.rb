@@ -1,6 +1,8 @@
+# encoding: utf-8
+
 class User < ApplicationRecord
   # attr_accessible :bio, :email, :full_name, :location,
-  #                   :password, :password_confirmation
+  #                   :password, :password_confirmation  
 
   validates_presence_of :email, :full_name, :location
   validates_length_of :bio, :minimum => 30, :allow_blank => false
@@ -10,6 +12,10 @@ class User < ApplicationRecord
   has_secure_password
 
   before_create :generate_token
+
+  # scope :most_recent, -> { order('created_at DESC') }
+  # scope :from_sampa, -> { where(:location => 'Sao Paulo') }  
+  scope :confirmed, -> { where('confirmed_at IS NOT NULL') }
 
   def generate_token
     self.confirmation_token = SecureRandom.urlsafe_base64
@@ -25,6 +31,12 @@ class User < ApplicationRecord
 
   def confirmed?
     confirmed_at.present?
+  end
+
+  def self.authenticate(email, password)
+    confirmed.
+    find_by_email(email)
+    try(:authenticate, password)
   end
 
 end
